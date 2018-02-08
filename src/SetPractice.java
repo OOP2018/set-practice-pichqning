@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Practice using a Set.
  */
-public class SetPractice {
+public class SetPractice implements Comparator<String> {
 	public static Iterator<String> itr;
 	/**
 	 * Add zero or more items to the set, and print what is being added.
@@ -71,7 +71,6 @@ public class SetPractice {
 		System.out.println();
 		
 		// 3. are the elements printed in same order than you added them? 
-		// ANS : NO
 		// What does this tell you about Sets? 
 		// ANS : HashSet is not guarantee that the element will be sorted in the same way or sorted by alphabet.
 		
@@ -91,7 +90,7 @@ public class SetPractice {
 	
 		
 		// 6. Print the elements in the set.  Is the order same as before?
-		// ANS : HashSet is not the same before but, TreeSet is the same.
+		
 		print(animal); 
 		System.out.println();
 		print(animal2);
@@ -110,6 +109,7 @@ public class SetPractice {
 		System.out.println();
 		
 		// 8. Print the elements in set.  Are there any duplicates?
+		//ANS : NO duplicates.
 		// What property of Set does this demonstrate?
 		System.out.println("HashSet contains: ");
 		print(animal);
@@ -131,4 +131,14 @@ public class SetPractice {
 	public static void main(String[] args) {
 		setExplorer();
 	}
+
+
+	@Override
+	public int compare(String arg0, String arg1) {
+		Comparator<String> comp = new Comparator<String>(); 
+			
+
+		return 0;
+	
+}
 }
